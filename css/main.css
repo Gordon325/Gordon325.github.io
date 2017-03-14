@@ -22,6 +22,9 @@ p, a {
   font-family: open sans;
   text-align: justify;
 }
+p {
+  line-height: 1.5;
+}
 .summary, .preamble {
   max-width: 100%;
   padding: 2px;
@@ -79,6 +82,7 @@ footer {
 footer a {
   color: white;
   padding: 25px;
+  font-family: open sans !important;
 }
 ul {
   list-style: none;
@@ -88,45 +92,68 @@ ul {
 li {
   font-family: open sans;
   font-size: .8em;
-  padding: 3px;
   font-weight: 700;
 }
-li:nth-child(6n+1), li:nth-child(6n+1) {
+.select-a-design li{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.archivesul{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.resourcesul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.indicator{
+  margin: 0;
+  padding: 0;
+}
+.design-name[href="/221/"], .designer-name[href*="andrew"],.design-name[href="/220/"], .designer-name[href*="danielmall"], .design-name[href="/219/"], .designer-name[href*="steffen"], .design-name[href="/218/"], .designer-name[href*="trent"], .design-name[href="/217/"], .designer-name[href*="elliot"], .design-name[href="/216/"], .designer-name[href*="jeremy"], .design-name[href="/215/"], .designer-name[href*="meltmedia"], .design-name[href="/214/"], .designer-name[href*="mezzo"], .next, .viewall, .view-css, .css-resources, .zen-faq, .zen-submit, .zen-translations{
+  border-radius: 9%;
+  border: 2px solid black;
+  margin-bottom: 5px;
+  height: 6vw;
+  display: flex;
+  flex-direction: column;
+  width: 46%;
+  text-align: center;
+}
+.design-name[href="/221/"], .designer-name[href*="andrew"], .design-name[href="/215/"], .designer-name[href*="meltmedia"],.zen-faq {
   background-color: rgba(0, 70, 173, .5);
-  border-radius: 9%;
-  border: 2px solid black;
-  margin-bottom: 5px;
 }
-li:nth-child(6n+2), li:nth-child(6n+2)  {
+.design-name[href="/220/"], .designer-name[href*="danielmall"], .design-name[href="/214/"], .designer-name[href*="mezzo"], .zen-submit{
   background-color: rgba(183, 18, 52, .5);
-  border-radius: 9%;
-  border: 2px solid black;
-  margin-bottom: 5px;
 }
-li:nth-child(6n+3), li:nth-child(6n+3) {
+.design-name[href="/219/"], .designer-name[href*="steffen"], .next,  .zen-translations {
   background-color: rgba(0, 155, 72, .5);
-  border-radius: 9%;
-  border: 2px solid black;
-  margin-bottom: 5px;
 }
-li:nth-child(6n+4), li:nth-child(6n+4) {
+.design-name[href="/218/"], .designer-name[href*="trent"], .viewall {
   background-color: rgba(255, 213, 0, .5);
-  border-radius: 9%;
-  border: 2px solid black;
-  margin-bottom: 5px;
 }
-li:nth-child(6n+5), li:nth-child(6n+5) {
+.design-name[href="/217/"], .designer-name[href*="elliot"], .view-css {
   background-color: rgba(255, 88, 0, .5);
-  border-radius: 9%;
-  border: 2px solid black;
-  margin-bottom: 5px;
 }
-li:nth-child(6n+6) {
+.design-name[href="/216/"], .designer-name[href*="jeremy"] {
   background-color: rgba(255, 255, 255, .5);
-  border-radius: 9%;
-  border: 2px solid black;
-  margin-bottom: 5px;
 }
+li a {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  font-family: baloo !important;
+  word-wrap: break-word;
+  text-align: center;
+}
+
 a:link {
   bcolor: black;
   font-family: open sans;
@@ -139,6 +166,7 @@ h3 {
 }
 a {
   color: black;
+  font-family: baloo !important;
 }
 .cubeImage {
   position: absolute;
@@ -148,7 +176,7 @@ a {
   margin-left: 10px
 }
 
-@media (max-width: 810px) 
+@media (max-width: 1075px) 
 {
  #css-zen-garden {
   max-width: 90%;
@@ -184,7 +212,7 @@ a {
   }
   
   .select, .archives, .resources{
-    margin-bottom: 0;
+    margin-bottom: 50px;
     padding-bottom: 0;
   }
   
@@ -198,37 +226,9 @@ a {
     margin-top: 0;
     padding-top: 0;
     top: 75px;
-    margin-bottom: 55px;
-  }
-  
-  ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: space-between;
-    
+    margin-bottom: 100%;
   }
  
-  li {
-    margin: 20px 20px 20px 0;
-    width: 100px;
-    height: 100px;
-    display: flex;
-  }
- 
-
-  .design-name, .design-name + p, .designer-name  {
-    align-self: center;
-  }
-.design-name + p
-  {
-    font-size: 1.2em;
-    margin: 5px
-  }
-  p {
-    font-size: .8em;
-  }
   .cubeImage {
     position: relative;
     max-width: 100%;
@@ -236,9 +236,17 @@ a {
     align: center;
     top: 15px;
   }
+  p a {
+    font-size: 1em;
+  }
   footer a {
   color: white;
   padding: 2px;
+  font-family: open sans !important;
+  font-size: 1em;
+  }
+  a {
+    font-size: 1.3em;
   }
   footer {
   position: fixed;
@@ -253,5 +261,37 @@ a {
   z-index: 1;
     padding-bottom: 10px
   }
-
+p {
+  line-height: 1.5;
+}
+.select-a-design li{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.archivesul{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.resourcesul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  }
+  .design-name[href="/221/"], .designer-name[href*="andrew"],.design-name[href="/220/"], .designer-name[href*="danielmall"], .design-name[href="/219/"], .designer-name[href*="steffen"], .design-name[href="/218/"], .designer-name[href*="trent"], .design-name[href="/217/"], .designer-name[href*="elliot"], .design-name[href="/216/"], .designer-name[href*="jeremy"], .design-name[href="/215/"], .designer-name[href*="meltmedia"], .design-name[href="/214/"], .designer-name[href*="mezzo"], .next, .viewall, .view-css, .css-resources, .zen-faq, .zen-submit, .zen-translations{
+  border-radius: 9%;
+  border: 2px solid black;
+  margin-bottom: 25px;
+  height: 32vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items:center;
+  width: 40%;
+  text-align: center;
+}
 }
