@@ -62,7 +62,7 @@ p {
   top: 300px;
   left: 0;
   border: 1px solid black;
-  max-width: 15%;
+  width: 15%;
   margin-left: 2px;
   padding: 1px;
 }
