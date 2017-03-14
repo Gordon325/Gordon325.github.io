@@ -1,4 +1,4 @@
-body {
+#css-zen-garden {
     max-width: 65%;
     margin: auto;
   background-image: url("https://i.imgur.com/X4LgNNL.png");
@@ -51,10 +51,13 @@ p, a {
 .participation, .requirements {
   float: right;
 }
+.requirements {
+  margin-bottom: 50px;
+}
 .sidebar {
   position: absolute;
   max-width: 47%;
-  top: 39.15%;
+  top: 300px;
   left: 0;
   border: 1px solid black;
   max-width: 15%;
@@ -147,7 +150,7 @@ a {
 
 @media (max-width: 810px) 
 {
-  body {
+ #css-zen-garden {
   max-width: 90%;
   margin: auto;
   background-image: url("https://i.imgur.com/X4LgNNL.png");
@@ -176,24 +179,52 @@ a {
   max-width: 100%;
   padding: 5px;
   border: 1px black solid;
-  margin-bottom: 15px;
+  margin-bottom: 15px;;
   text-align: center;
   }
-  .sidebar {
-    position: relative;
-    border: none;
-    max-width: 100%;
-    margin-bottom: 27px;
+  
+  .select, .archives, .resources{
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
   
-  li:nth-child(all) {
-    height: 75px !important;
-    width: 75px !important;
-    margin: 0 5px 30px 5px;
+  .archives, .resources, .sidebar{
+    margin-top: 75px;
   }
+  .sidebar {
+    border: none;
+    position: relative;
+    max-width: 100%;
+    margin-top: 0;
+    padding-top: 0;
+    top: 75px;
+    margin-bottom: 55px;
+  }
+  
+  ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-between;
+    
+  }
+ 
   li {
-    padding: 10px 0 10px 0;
-    margin: 20px 0 20px 0;
+    margin: 20px 20px 20px 0;
+    width: 100px;
+    height: 100px;
+    display: flex;
+  }
+ 
+
+  .design-name, .design-name + p, .designer-name  {
+    align-self: center;
+  }
+.design-name + p
+  {
+    font-size: 1.2em;
+    margin: 5px
   }
   p {
     font-size: .8em;
@@ -208,6 +239,19 @@ a {
   footer a {
   color: white;
   padding: 2px;
+  }
+  footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  border: 1px solid black;
+  max-height: 20px;
+  width: 100%;
+  text-align: center;
+  background-color: black;
+  color: white; 
+  z-index: 1;
+    padding-bottom: 10px
   }
 
 }
