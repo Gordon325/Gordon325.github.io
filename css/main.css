@@ -59,7 +59,6 @@ p {
 }
 .sidebar {
   position: absolute;
-  max-width: 47%;
   top: 300px;
   left: 0;
   border: 1px solid black;
@@ -94,57 +93,49 @@ li {
   font-size: .8em;
   font-weight: 700;
 }
-.select-a-design li{
+.select-a-design li,  .resourcesul li, .archivesul li{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.archivesul{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+.resourcesul li, .archivesul li{
+  align-content: center;
+  justify-content: center;
 }
-.resourcesul {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
+  
+
 .indicator{
   margin: 0;
   padding: 0;
 }
-.design-name[href="/221/"], .designer-name[href*="andrew"],.design-name[href="/220/"], .designer-name[href*="danielmall"], .design-name[href="/219/"], .designer-name[href*="steffen"], .design-name[href="/218/"], .designer-name[href*="trent"], .design-name[href="/217/"], .designer-name[href*="elliot"], .design-name[href="/216/"], .designer-name[href*="jeremy"], .design-name[href="/215/"], .designer-name[href*="meltmedia"], .design-name[href="/214/"], .designer-name[href*="mezzo"], .next, .viewall, .view-css, .css-resources, .zen-faq, .zen-submit, .zen-translations{
+.design-name[href="/221/"], .designer-name[href*="andrew"],.design-name[href="/220/"], .designer-name[href*="danielmall"], .design-name[href="/219/"], .designer-name[href*="steffen"], .design-name[href="/218/"], .designer-name[href*="trent"], .design-name[href="/217/"], .designer-name[href*="elliot"], .design-name[href="/216/"], .designer-name[href*="jeremy"], .design-name[href="/215/"], .designer-name[href*="meltmedia"], .design-name[href="/214/"], .designer-name[href*="mezzo"], .zen-faq a, .zen-submit a, .css-resources a, .view-css a, .zen-translations a, .next a, .viewall a{
   border-radius: 9%;
   border: 2px solid black;
   margin-bottom: 5px;
-  height: 6vw;
-  display: flex;
-  flex-direction: column;
-  width: 46%;
+  height: 6.1vw;
+  width: 46% !important;
   text-align: center;
 }
-.design-name[href="/221/"], .designer-name[href*="andrew"], .design-name[href="/215/"], .designer-name[href*="meltmedia"],.zen-faq {
+.design-name[href="/221/"], .designer-name[href*="andrew"], .design-name[href="/215/"], .designer-name[href*="meltmedia"],.zen-faq a{
   background-color: rgba(0, 70, 173, .5);
 }
-.design-name[href="/220/"], .designer-name[href*="danielmall"], .design-name[href="/214/"], .designer-name[href*="mezzo"], .zen-submit{
+.design-name[href="/220/"], .designer-name[href*="danielmall"], .design-name[href="/214/"], .designer-name[href*="mezzo"], .zen-submit a {
   background-color: rgba(183, 18, 52, .5);
 }
-.design-name[href="/219/"], .designer-name[href*="steffen"], .next,  .zen-translations {
+.design-name[href="/219/"], .designer-name[href*="steffen"], .next a ,  .zen-translations a  {
   background-color: rgba(0, 155, 72, .5);
 }
-.design-name[href="/218/"], .designer-name[href*="trent"], .viewall {
+.design-name[href="/218/"], .designer-name[href*="trent"], .viewall a {
   background-color: rgba(255, 213, 0, .5);
 }
-.design-name[href="/217/"], .designer-name[href*="elliot"], .view-css {
+.design-name[href="/217/"], .designer-name[href*="elliot"], .view-css a  {
   background-color: rgba(255, 88, 0, .5);
 }
 .design-name[href="/216/"], .designer-name[href*="jeremy"] {
   background-color: rgba(255, 255, 255, .5);
 }
-li a {
+li a{
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -175,8 +166,77 @@ a {
   max-width: 14%;
   margin-left: 10px
 }
+li a:hover {
+  transform: rotate(10deg)
+}
+li a:active {
+  transform: rotate(350deg)
+}
 
 @media (max-width: 1075px) 
+{
+#css-zen-garden {
+    max-width: 65%;
+    margin-right: 6%;
+  background-image: url("https://i.imgur.com/X4LgNNL.png");
+  background-repeat: repeat-y;
+  background-position: right;
+  background-size: 10%;
+}
+  .sidebar{
+    max-width: 27%;
+    top: 190px;
+    
+  }
+  .summary, .preamble {
+  max-width: 100%;
+  padding: 2px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.preamble {
+    border: 1px black solid;
+  text-align: center;
+}
+.main {
+  position: relative;
+  text-align: justify;
+ 
+}
+.explanation, .participation, .benefits, .requirements {
+  max-width: 100%;
+  padding: 5px;
+  border: 1px black solid;
+  margin-bottom: 15px;;
+  text-align: center;
+  }
+  
+  .select, .archives, .resources{
+    margin-bottom: 50px;
+    padding-bottom: 0;
+  }
+  
+  .archives, .resources, .sidebar{
+    margin-top: 75px;
+  }
+  .design-name[href="/221/"], .designer-name[href*="andrew"],.design-name[href="/220/"], .designer-name[href*="danielmall"], .design-name[href="/219/"], .designer-name[href*="steffen"], .design-name[href="/218/"], .designer-name[href*="trent"], .design-name[href="/217/"], .designer-name[href*="elliot"], .design-name[href="/216/"], .designer-name[href*="jeremy"], .design-name[href="/215/"], .designer-name[href*="meltmedia"], .design-name[href="/214/"], .designer-name[href*="mezzo"], .zen-faq a, .zen-submit a, .css-resources a, .view-css a, .zen-translations a, .next a, .viewall a{
+  border-radius: 9%;
+  border: 2px solid black;
+  margin-bottom: 5px;
+  height: 9.8vw;
+  width: 46% !important;
+  text-align: center;
+}
+  .requirements {
+    margin-bottom: 75px;
+  }
+  .cubeImage {
+    max-width: 20%;
+  }
+  
+  }
+@media (max-width: 625px) 
 {
  #css-zen-garden {
   max-width: 90%;
@@ -270,28 +330,18 @@ p {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.archivesul{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.resourcesul {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  }
-  .design-name[href="/221/"], .designer-name[href*="andrew"],.design-name[href="/220/"], .designer-name[href*="danielmall"], .design-name[href="/219/"], .designer-name[href*="steffen"], .design-name[href="/218/"], .designer-name[href*="trent"], .design-name[href="/217/"], .designer-name[href*="elliot"], .design-name[href="/216/"], .designer-name[href*="jeremy"], .design-name[href="/215/"], .designer-name[href*="meltmedia"], .design-name[href="/214/"], .designer-name[href*="mezzo"], .next, .viewall, .view-css, .css-resources, .zen-faq, .zen-submit, .zen-translations{
+
+
+  .design-name[href="/221/"], .designer-name[href*="andrew"],.design-name[href="/220/"], .designer-name[href*="danielmall"], .design-name[href="/219/"], .designer-name[href*="steffen"], .design-name[href="/218/"], .designer-name[href*="trent"], .design-name[href="/217/"], .designer-name[href*="elliot"], .design-name[href="/216/"], .designer-name[href*="jeremy"], .design-name[href="/215/"], .designer-name[href*="meltmedia"], .design-name[href="/214/"], .designer-name[href*="mezzo"], .next a, .viewall a, .view-css a, .css-resources a, .zen-faq a, .zen-submit a, .zen-translations a{
   border-radius: 9%;
   border: 2px solid black;
   margin-bottom: 25px;
-  height: 32vw;
-  display: flex;
+  height: 35vw;
   justify-content: center;
   flex-direction: column;
   align-items:center;
   width: 40%;
   text-align: center;
 }
+
 }
